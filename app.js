@@ -56,8 +56,8 @@ App({
       success:function(res){
         if(res.code){
           _this.request(res.code,function (res) {
-            _this.globalData.glosid = res.data;
-            console.log(_this.globalData.glosid);
+            _this.globalData.glosid = res.data.sid;
+            _this.globalData.openid = res.data.user[0].openid;
           });
         }
       }
@@ -69,6 +69,8 @@ App({
 
   globalData: {
     host:'http://localhost/wechat/',
-    glosid:null
+    glosid:null,
+    userinfo:null,
+    openid:null
   }
 })
