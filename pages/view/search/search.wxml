@@ -1,0 +1,13 @@
+<!--pages/view/search/search.wxml-->
+<view class='page'>
+<view class="search">
+  <input placeholder='请输入搜索商品' value="{{str}}" bindconfirm='onSearch' bindinput='getValue' style='width:95%'></input>
+  <view catchtap="onSearch" data-st='{{str}}'><icon type="search" size='16' ></icon></view>
+</view>
+<view class= "searchContent">
+  <view class='searchType' wx:for='{{list}}' wx:key=''  wx:for-item="value" wx:for-index='id'>
+  {{value}}
+  <icon type='clear' size='12' color='#F00' class="clear" catchtap='iconClose' data-id="{{id}}"></icon>
+  </view>
+</view>
+</view>

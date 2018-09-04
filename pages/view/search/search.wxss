@@ -1,0 +1,21 @@
+/* pages/view/search/search.wxss */
+.searchContent{
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 10px;
+}
+.searchType{
+  padding: 5px;
+  font-size: 10px;
+  background-color: #c0c0c0;
+  color: #ffff;
+  border-radius: 3px;
+  margin-left: 10px;
+  margin-top: 10px;
+  
+}
+.clear{
+  position: relative;
+  left: 10px;
+  top: -10px;
+}

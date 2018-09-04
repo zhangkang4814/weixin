@@ -1,0 +1,41 @@
+<!--pages/view/view.wxml-->
+<view class='page'>
+  <swiper indicator-dots="true" circular="true" autoplay="true">
+    <swiper-item wx:for="{{[1,2,3,4]}}" wx:key="">
+      <image src="./images/111.png" mode="widthFix" style='width:100%'></image> 
+    </swiper-item>
+  </swiper>
+  <view class="search" catchtap='onClickSearch'>
+    <view style='width:95%'>请输入搜索商品</view>
+    <view><icon type="search" size='16'></icon></view>
+  </view>
+  <view class='nav'>
+    <view wx:for='{{list}}' wx:key=''>
+      <view class="navIcon" catchtap='onClickNav'><image src='./images/{{item[0]}}'></image></view>
+      <view>{{item[1]}}</view>
+      <view><image src='./images/{{item[2]}}'></image></view>
+      <view style='color:#BB9249'>{{item[3]}}</view>
+    </view>
+  </view>
+<view class='content'>
+  <view class='back'>
+    <image src='./images/back.png' mode="widthFix"></image>
+  </view>
+  <view class="slecet">
+    <view><image src='./images/kuai.png' mode="widthFix"></image></view>
+    <view><image src='./images/kuai2.png' mode="widthFix"></image></view>
+    <view><image src='./images/kuai3.png' mode="widthFix"></image></view>
+  </view>
+  <view class="slecet">
+    <view><image src='./images/kuai4.png' mode="widthFix"></image></view>
+    <view><image src='./images/kuai5.png' mode="widthFix"></image></view>
+    <view><image src='./images/kuai6.png' mode="widthFix"></image></view>
+  </view>
+</view>
+<view class='title'>今日推荐 限时秒杀</view>
+<view class="goods">
+  <view><image src='./images/goods.png' mode="widthFix"></image>-------------------随便写点啥</view>
+  <view><image src='./images/goods.png' mode="widthFix"></image>随便写点啥</view>
+</view>
+</view>
+

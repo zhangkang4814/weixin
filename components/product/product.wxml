@@ -1,0 +1,23 @@
+<!--pages/index/products.wxml-->
+<view class='page'>
+  <view class='muen' wx:if="{{cate.length>0}}">
+    <view wx:for='{{cate}}' wx:key='' wx:for-index='id' data-id='{{id}}' class='cate {{nowId==id ? "cate-active" : ""}}' catchtap='onClickCate'>{{item.catename}}<view class='cateNum' wx:if="{{item.num>0}}">{{item.num}}</view></view>
+  </view>
+  <view class='content'>
+    <view class='product' wx:for="{{products}}" wx:key=''>
+      <view class='pro_img'>
+        <image src='{{item.picurl}}'></image>
+      </view>
+      <view class='pro_info'>
+        <view class='pro_title'>{{item.productname}}</view>
+        <view class='pro_old_price'>原价:￥{{item.oldprice}}</view>
+        <view class='pro_price'>折扣价:￥{{item.price}}</view>
+          <view class='pro_nub'>
+            <view class='nub_control' catchtap='onProNubInc' data-id="{{index}}">+</view>
+            <view class='nub'>{{item.num}}</view>
+            <view class='nub_control' catchtap='onProNubDec'data-id="{{index}}">-</view>
+          </view>
+      </view>
+    </view>
+  </view>
+</view>
