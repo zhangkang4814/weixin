@@ -1,8 +1,11 @@
 <!--pages/user/userCenter.wxml-->
 <view class='page'>
-  <!-- <view class='face'></view>
-  <view class='userinfo'></view> -->
-  <view class='getuser'>
-    <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">获取用户信息</button>
+  <view class='face' wx:if="{{userinfo.face!=null}}"><image src='{{userinfo.face}}'></image></view>
+  <view class='userinfo' wx:if="{{userinfo.face!=null}}">{{userinfo.nickname}}</view>
+  <view class='getuser' wx:if="{{userinfo.face==null}}">
+    <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">获取用户信息</button>
+  </view>
+  <view class='getphone' wx:if="{{userinfo.face!=null}}">
+    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" wx:if="{{userinfo.phone==null}}">绑定手机</button>
   </view>
 </view>

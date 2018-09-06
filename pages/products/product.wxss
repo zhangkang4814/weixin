@@ -47,7 +47,7 @@
 }
 .product{
   width: 100%;
-  height: 80px;
+  height: 90px;
   display: flex;
   border-bottom: 1px solid #999;
   color: #888;
@@ -56,7 +56,7 @@
   font-size: 13px;
 }
 .pro_img{
-  width: 38%;
+  width: 40%;
   /* border: 1px solid red; */
 }
 .pro_img>image{

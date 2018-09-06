@@ -1,0 +1,21 @@
+<!--components/card/card.wxml-->
+ <view class='card-content'>
+  <view class="card">
+    <view class="card-details color-df4">
+      <text>openid</text>
+      <text>满$100 - $10</text>
+    </view>
+    <view class="card-true">
+      <view class="color-df4">领取卡券</view>
+    </view>
+  </view>
+  <view class="card">
+    <view class="card-details color-df4">
+      <text>openid</text>
+      <text>满$100 - $10</text>
+    </view>
+    <view class="card-true">
+      <view class="color-df4">领取卡券</view>
+    </view>
+  </view>
+ </view>

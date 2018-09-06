@@ -6,7 +6,9 @@
     "pages/view/search/search",
     "components/product/product",
     "pages/products/product",
-    "pages/user/userCenter"
+    "pages/user/userCenter",
+    "pages/card/card",
+    "pages/cardlist/cardlist"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -17,18 +19,18 @@
   "tabBar": {
     "list": [
       {
-        "selectedIconPath": "",
-        "iconPath": "",
+        "selectedIconPath": "pages/image/sy2.png",
+        "iconPath": "pages/image/sy.png",
         "pagePath": "pages/view/view"
       },
       {
-        "selectedIconPath": "pages/image/22.png",
-        "iconPath": "pages/image/userCenter.png",
+        "selectedIconPath": "pages/image/grzx.png",
+        "iconPath": "pages/image/grzx2.png",
         "pagePath": "pages/user/userCenter"
       },
       {
-        "selectedIconPath": "",
-        "iconPath": "",
+        "selectedIconPath": "pages/image/cp.png",
+        "iconPath": "pages/image/cp2.png",
         "pagePath": "pages/products/product"
       }
     ]

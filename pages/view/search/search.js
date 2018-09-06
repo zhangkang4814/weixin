@@ -14,12 +14,19 @@ Page({
   onSearch:function(){
     var str = this.data.str;
     var arr = this.data.list;
-    this.updateStr(str);
-    arr.push(str);
-    this.setData({
-      list: arr,
-      str: ''
-    });
+    var preg = /[^\s$]+/;
+    if(preg.test(str)){
+      this.updateStr(str);
+      arr.push(str);
+      this.setData({
+        list: arr,
+        str: ''
+      });
+    }else{
+      this.setData({
+        str: ''
+      });
+    } 
   },
 
   getValue:function(e){
@@ -63,6 +70,7 @@ Page({
     });
     var _this = this;
     var sid = glob.glosid;
+    console.log(sid);
     wx.request({
       url: glob.host+'loadstr.php',
       // header: {
@@ -87,7 +95,6 @@ Page({
   onLoad: function (options) {
     var _this = this;
     this.loadStr(function(res){
-      console.log(res);
       if(res.data){
         // var str = res.data;
         // var list = _this.data.list;
